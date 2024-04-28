@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stack Function work with input and Button</title>
+    <script>
+      let data = [];
+      let currentSize = data.length;
+      const maxSize = 5;
+
+      const stackPush = () => {
+        let value = document.getElementById("stackValue").value;
+        if (currentSize >= maxSize) {
+          console.log("Stack is full, you can not add", value);
+        } else {
+          data[currentSize] = value;
+          currentSize += 1;
+          document.getElementById("stackValue").value = "";
+          console.log("Data is Added");
+        }
+      };
+
+      const stackPop = () => {
+        if (currentSize > 0) {
+          currentSize -= 1;
+          data.length = currentSize;
+        } else {
+          console.log("This stack is empty");
+        }
+      };
+
+      const display = () => {
+        for (let i = 0; i < data.length; i++) {
+          console.log("Stack Element is ", i, "and Value", data[i]);
+        }
+      };
+    </script>
+  </head>
+  <body>
+    <h2>Stack Function</h2>
+    <br />
+
+    <input type="text" id="stackValue" placeholder="Enter Stack Value" />
+    <button onclick="stackPush()">Add Element to Stack</button>
+    <button onclick="stackPop()">Remove Element to Stack</button>
+    <button onclick="display()">Display All Element</button>
+  </body>
+</html>

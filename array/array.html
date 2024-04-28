@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <script>
+      let data = [9, 8, 7, 5, 10, 12, 99, 54, 65, 45, 85];
+      for (let i = 0; i < data.length; i++) {
+        document.write(`Array ${i} element is ${data[i]} <br>`);
+      }
+
+      document.write(`<h2> Array 3rd element is ${data[3]} </h2>`);
+
+      function getElement() {
+        // event.preventDefault();
+        const el = document.getElementById("element").value;
+
+        if (data.length >= el) {
+          document.getElementById("showValue").innerText = data[el];
+        } else {
+          document.getElementById("showValue").innerText =
+            "Please Enter Valid Value";
+        }
+        form.reset();
+      }
+
+      function reset() {
+        document.getElementById("myForm").reset();
+      }
+    </script>
+  </head>
+  <body>
+    <form onclick="getElement()" id="myForm">
+      <input type="text" id="element" />
+      <!-- <button onclick="getElement()">Get Element</button> -->
+      <input type="button" value="Get Element" onclick="reset()" />
+    </form>
+    <h2 id="showValue"></h2>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Merge</title>
+    <script>
+      let dataOne = [10, 20, 30, 40, 50];
+      let dataTwo = [60, 70, 80, 90, 100];
+      let dataThree = [200, 300, 400, 500, 600];
+      let dataFour = ["A", "B", "C"];
+      let mergedArray = [];
+
+      for (let i = 0; i < dataOne.length; i++) {
+        mergedArray[mergedArray.length] = dataOne[i];
+      }
+
+      for (let j = 0; j < dataTwo.length; j++) {
+        mergedArray[mergedArray.length] = dataTwo[j];
+      }
+      for (let k = 0; k < dataThree.length; k++) {
+        mergedArray[mergedArray.length] = dataThree[k];
+      }
+      for (let l = 0; l < dataFour.length; l++) {
+        mergedArray[mergedArray.length] = dataFour[l];
+      }
+      console.log(mergedArray);
+    </script>
+  </head>
+  <body>
+    <h2>Array Merge</h2>
+  </body>
+</html>

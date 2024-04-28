@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delete element in Array</title>
+    <script>
+      //  manually
+      let data = [10, 20, 30, 40, 50, 60, 70, 80];
+      const deletePosition = 3;
+      for (let i = deletePosition; i < data.length - 1; i++) {
+        data[i] = data[i + 1];
+      }
+      data.length = data.length - 1;
+      console.log(data);
+
+      // ES6 module
+
+      let newData = [10, 20, 30, 40, 50, 60, 70, 80];
+      const position = 3;
+      newData.splice(position, 1);
+      console.log(newData);
+    </script>
+  </head>
+  <body>
+    <h2></h2>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Traversing</title>
+    <script>
+      // New element insert into array
+
+      // Javascript ES6 Module
+      let arrays = [0, 5, 4, 8, 90, 45, 75, 85];
+      let newArrays = [...arrays];
+      let result = newArrays.splice(2, 0, 100);
+      document.write(`<h2>Old array = ${arrays} </h2> <br>`);
+      document.write(`<h2>New array = ${newArrays} </h2>`);
+
+      // General Module
+
+      let data = [5, 6, 8, 7, 9, 12, 52, 81];
+      const position = 3;
+      const newElement = 20;
+
+      for (let i = data.length - 1; i > 0; i--) {
+        // document.write(`${data[i]} <br>`);
+
+        if (i >= position) {
+          data[i + 1] = data[i];
+          if (i == position) {
+            data[i] = newElement;
+          }
+        }
+      }
+      document.write(data);
+    </script>
+  </head>
+  <body></body>
+</html>
