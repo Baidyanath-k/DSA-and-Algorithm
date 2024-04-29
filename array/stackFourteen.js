@@ -1,6 +1,6 @@
 //**  stack is linear data structure
 //**  element fixed
-//**  Last In Fast Out (LIFO)
+//**  Last In, Fast Out (LIFO)
 //**  Operations ==> Push, Pop, Peek(Or top), isEmpty, Size
 
 // Stack Push
