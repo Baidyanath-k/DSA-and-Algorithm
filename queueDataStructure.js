@@ -30,11 +30,16 @@ const enqueue = (value) => {
 };
 
 const dequeue = () => {
-  for (let i = 0; i < queueData.length; i++) {
-    queueData[i] = queueData[i + 1];
-  }
-  currentSize-=1;
-  queueData.length = currentSize;
+    if (currentSize>0) {
+        for (let i = 0; i < queueData.length; i++) {
+          queueData[i] = queueData[i + 1];
+        }
+        currentSize -= 1;
+        queueData.length = currentSize;
+    }else{
+        console.log("Queue is empty");
+    }
+  
 };
 
 enqueue(20);
@@ -44,6 +49,12 @@ enqueue(50);
 enqueue(60);
 dequeue();
 enqueue(70);
+dequeue();
+dequeue();
+dequeue();
+dequeue();
+dequeue();
+dequeue();
 
 
 
