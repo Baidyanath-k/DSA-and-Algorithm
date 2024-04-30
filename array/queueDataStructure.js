@@ -11,7 +11,7 @@
 /* 
 Operations: Queues typically support two primary operations:
     1. Enqueue: Adds an element to the back of the queue.
-    2. Dequeue: Removes the element at the First In of the queue.
+    2. Dequeue: Removes the element at the First In of the queue. (Delete First Position)
 */
 
 

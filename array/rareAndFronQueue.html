@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Front and Rear in Queue</title>
+    <script>
+      let data = [];
+      let currentSize = data.length;
+      let max = 5;
+
+      const enqueue = () => {
+        let value = document.getElementById("queueValue").value;
+        if (currentSize >= max) {
+          console.log("Queue is full, Do not entry", value);
+        } else {
+          data[currentSize] = value;
+          currentSize += 1;
+          document.getElementById("queueValue").value = "";
+          console.log("Data is added");
+        }
+      };
+
+      const dequeue = () => {
+        if (currentSize > 0) {
+          for (let i = 0; i < data.length; i++) {
+            data[i] = data[i + 1];
+          }
+          currentSize -= 1;
+          data.length = currentSize;
+
+          console.log("Remove in First data");
+        } else {
+          console.log("Queue is empty");
+        }
+      };
+
+      const frontQueue = () => {
+        console.log("Queue Front is", data[0]);
+      };
+
+      const rearQueue = () => {
+        let rear = data[currentSize - 1];
+        console.log("Queue Rear is ", rear);
+      };
+
+      const display = () => {
+        for (let i = 0; i < data.length; i++) {
+          console.log(data[i]);
+        }
+      };
+    </script>
+  </head>
+  <body>
+    <input type="text" placeholder="Enter Queue value" id="queueValue" />
+    <button onclick="enqueue()">Enqueue queue</button>
+    <button onclick="dequeue()">Dequeue queue</button>
+    <button onclick="frontQueue()">Front queue</button>
+    <button onclick="rearQueue()">Rear queue</button>
+    <button onclick="display()">Display</button>
+  </body>
+</html>
