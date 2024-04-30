@@ -1,3 +1,4 @@
+// Number data search in Linear Search
 let data = [
   10, 20, 30, 55, 40, 50, 60, 70, 80, 90, 2, 8, 9, 11, 25, 82, 98, 12, 55,
 ];
@@ -16,6 +17,8 @@ if (!position) {
   console.log(position);
 }
 
+
+// String data search in Linear Search
 let dataTwo = ["BK", "CK", "DK", "AK","BK"];
 let target="BK";
 let positions=[];
